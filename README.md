@@ -1,7 +1,5 @@
 # Puffy Scattering AI
 
-[中文说明](README.zh-CN.md)
-
 Python numerical calculations and Gaussian-process surrogates for finite-size Yukawa scattering.
 
 **The idea is to calculate a small set of parameter points with a physics solver, then train a model to predict scattering results quickly within the same parameter domain.** Model uncertainty is used to choose where additional physics calculations are performed.
