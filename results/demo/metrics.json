@@ -1,0 +1,89 @@
+{
+  "provenance": "NEW prototype, independent standard solver; not paper reproduction or notebook export",
+  "seed": 2026,
+  "domain": {
+    "b": [
+      0.2,
+      7.0
+    ],
+    "kappa": 0.35,
+    "ychi": 1.0,
+    "yn": 0.5
+  },
+  "config": {
+    "lmax": 10,
+    "rtol": 2e-08,
+    "atol": 2e-10,
+    "grid": 700,
+    "tail": 22.0,
+    "start": 0.0001,
+    "quadrature": 48
+  },
+  "n_initial_train": 24,
+  "n_active": 6,
+  "n_test": 20,
+  "selected_b": [
+    0.21321768340554006,
+    6.566059520200301,
+    0.25289397724061935,
+    5.535916731887813,
+    1.1832159566199234,
+    0.637376692371989
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "sklearn": "1.9.1"
+  },
+  "metrics": {
+    "GP_initial": {
+      "log10_rmse": 0.0007976539931423028,
+      "median_relative_error": 3.664421379891341e-06,
+      "p95_relative_error": 0.0021623209674637364,
+      "max_relative_error": 0.00786921219846814
+    },
+    "GP_final": {
+      "log10_rmse": 0.00011266890703535827,
+      "median_relative_error": 2.0625294482365867e-06,
+      "p95_relative_error": 7.76831779801663e-05,
+      "max_relative_error": 0.0011591088202542532
+    },
+    "PCHIP_initial": {
+      "log10_rmse": 0.0014408708027680568,
+      "median_relative_error": 9.83586117212286e-05,
+      "p95_relative_error": 0.007943400448005867,
+      "max_relative_error": 0.009124949406179427
+    },
+    "PCHIP_final": {
+      "log10_rmse": 0.00040388760627424263,
+      "median_relative_error": 0.00014731311150121748,
+      "p95_relative_error": 0.002073430601557109,
+      "max_relative_error": 0.002419811954027665
+    },
+    "Born": {
+      "log10_rmse": 0.31612236992577303,
+      "median_relative_error": 0.42500614651913676,
+      "p95_relative_error": 1.858940929346383,
+      "max_relative_error": 2.784430695819294
+    }
+  },
+  "gp_95_interval_empirical_coverage": 1.0,
+  "timing": {
+    "all_label_generation_seconds": 12.852082500001416,
+    "all_gp_fits_seconds": 0.16606779195717536,
+    "test_reference_seconds": 5.360444540972821,
+    "gp_test_prediction_seconds": 0.00029183298465795815,
+    "prediction_only_speedup": 18368.19284583445
+  },
+  "optimizer_warnings": [
+    "The optimal value found for dimension 0 of parameter k2__noise_level is close to the specified lower bound 1e-10. Decreasing the bound and calling fit again may find a better value.",
+    "lbfgs failed to converge after 18 iteration(s) (status=2):\nABNORMAL: \n\nYou might also want to scale the data as shown in:\n    https://scikit-learn.org/stable/modules/preprocessing.html"
+  ],
+  "limitations": [
+    "One fixed slice; no extrapolation; no detector likelihood or nuclear coherence factors.",
+    "Small random holdout is not a resonance-focused or out-of-distribution certification.",
+    "GP intervals are empirical model uncertainty, not rigorous numerical-error bounds.",
+    "Speedup excludes training and label generation; no end-to-end saving established."
+  ]
+}

@@ -1,0 +1,81 @@
+Release verification: 2026-10-26
+Offline verification uses preinstalled local dependency libraries; no fresh online dependency resolution was performed.
+Wheel built with pip wheel --no-deps --no-build-isolation and installed into an isolated target directory.
+COMMAND: python -m pytest -q
+...................                                                      [100%]
+19 passed in 2.25s
+
+
+EXIT: 0
+COMMAND: python examples/quickstart.py
+{
+  "S": 0.7736869298446929,
+  "sigma_mphi2": 79.36683020338054,
+  "phases": [
+    1.119699036902611,
+    0.04983856713258177,
+    0.0034932690255980023,
+    0.00029102102629280813,
+    2.5595273586382723e-05,
+    2.310069927712014e-06,
+    2.1182669931333864e-07,
+    1.962540710263513e-08,
+    1.8260970744797911e-09,
+    1.689128383747251e-10,
+    1.5281643548870196e-11,
+    1.3249838841914701e-12
+  ],
+  "tail_fraction": 3.225400802446101e-17,
+  "end": 23.5,
+  "born_S": 0.26447781592080377
+}
+
+
+EXIT: 0
+COMMAND: python examples/train_from_csv.py
+{
+  "log10_rmse": 0.00011266890703535827,
+  "median_relative_error": 2.0625294482365867e-06,
+  "p95_relative_error": 7.76831779801663e-05,
+  "max_relative_error": 0.0011591088202542532
+}
+Optimizer warnings: []
+
+
+EXIT: 0
+COMMAND: python -m puffy solve --b 2
+{
+  "S": 0.7736869298446929,
+  "sigma_mphi2": 79.36683020338054,
+  "phases": [
+    1.119699036902611,
+    0.04983856713258177,
+    0.0034932690255980023,
+    0.00029102102629280813,
+    2.5595273586382723e-05,
+    2.310069927712014e-06,
+    2.1182669931333864e-07,
+    1.962540710263513e-08,
+    1.8260970744797911e-09,
+    1.689128383747251e-10,
+    1.5281643548870196e-11,
+    1.3249838841914701e-12
+  ],
+  "tail_fraction": 3.225400802446101e-17,
+  "end": 23.5
+}
+
+
+EXIT: 0
+Notebook: all code cells executed sequentially in fresh interpreter (not a Jupyter kernel/frontend execution).
+{'S': 0.7736869298446929, 'sigma_mphi2': 79.36683020338054, 'phases': [1.119699036902611, 0.04983856713258177, 0.0034932690255980023, 0.00029102102629280813, 2.5595273586382723e-05, 2.310069927712014e-06, 2.1182669931333864e-07, 1.962540710263513e-08, 1.8260970744797911e-09, 1.689128383747251e-10, 1.5281643548870196e-11, 1.3249838841914701e-12], 'tail_fraction': 3.225400802446101e-17, 'end': 23.5}
+Born: 0.26447781592080377
+{'log10_rmse': 2.9617532581039136e-05, 'median_relative_error': 6.525972123138714e-06, 'p95_relative_error': 9.560805380647727e-05, 'max_relative_error': 0.0002586574846988837}
+['The optimal value found for dimension 0 of parameter k1__k2__length_scale is close to the specified upper bound 3.0. Increasing the bound and calling fit again may find a better value.', 'The optimal value found for dimension 0 of parameter k2__noise_level is close to the specified lower bound 1e-10. Decreasing the bound and calling fit again may find a better value.']
+
+
+EXIT: 0
+GitHub Actions not run remotely. Python matrix not locally tested.
+Python: 3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]
+End-to-end benchmark: 8 initial + 2 active training labels; 5 independent holdout labels; 3 refinement comparisons. Completed successfully. Optimizer boundary warnings preserved in results/release-smoke/metrics.json.
+Release fixes: consistent 0.2.0 version; benchmark defaults to results/my-run; plot labels reflect actual training counts.

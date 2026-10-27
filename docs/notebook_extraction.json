@@ -1,0 +1,6 @@
+{
+  "input": "new(1).nb",
+  "sha256": "a38d3506dd6b43e1e5fcc19c3f13e05e21ebe2bf378d98d8a580845c024f44f3",
+  "retained_cells": 109,
+  "execution": "none; static inspection only"
+}

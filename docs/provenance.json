@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-22",
+  "paper_doi": "10.1007/JHEP04(2026)006",
+  "files": [
+    {
+      "name": "2026JHEP.pdf",
+      "bytes": 1653525,
+      "sha256": "a04fe7e0846431c7f14da492d2381c316850f8bfa16571d99ba848729b5ddada"
+    },
+    {
+      "name": "new(1).nb",
+      "bytes": 67373146,
+      "sha256": "a38d3506dd6b43e1e5fcc19c3f13e05e21ebe2bf378d98d8a580845c024f44f3"
+    }
+  ],
+  "notebook_execution": "Static inspection only; no Mathematica kernel execution",
+  "python_scope": "Independent normalized uniform-ball Yukawa solver and one-dimensional ML prototype; not a literal notebook translation or full paper reproduction.",
+  "release_date": "2026-10-26",
+  "source_hashes_reverified": true,
+  "code_origin": "Existing independent Python implementation recovered from the current project; reorganized and supplemented for this release, not recovered from the unavailable sandbox zip.",
+  "notebook_extraction": "Current read-only inventory; no original code cells redistributed. New Python tutorial is independently authored."
+}
